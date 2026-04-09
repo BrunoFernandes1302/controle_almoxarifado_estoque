@@ -1,0 +1,79 @@
+.footer {
+    font-family: 'Minecraft', sans-serif;
+    width: 60vw;
+    height: 8vh;
+    background-color: #0c2a42;
+    color: #fac917;
+    margin: 15px auto 0 auto;
+    border-radius: 25px 25px 0 0;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer a {
+    margin: 0 15px;
+    color: #fac917;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #cbcbcb;
+}
+
+.footer p {
+    width: 50%;
+    padding-left: 35px;
+    margin: 0; 
+}
+
+.footer div {
+    width: 50%;
+    display: flex;
+    gap: 15px;
+    justify-content: right;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: 80vw; 
+        height: auto; 
+        flex-direction: column;
+        text-align: center; 
+        padding: 20px; 
+    }
+
+    .footer p {
+        width: 100%;
+        padding-left: 0; 
+        margin-top: 10px; 
+    }
+
+    .footer div {
+        width: 100%; 
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer a {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        width: 90vw; 
+        padding: 10px; 
+    }
+
+    .footer p {
+        width: 100%; 
+    }
+
+    .footer div {
+        width: 100%;
+        justify-content: space-evenly; 
+    }
+}

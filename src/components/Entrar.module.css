@@ -1,0 +1,66 @@
+.entrar{
+    text-align: center;
+    min-height: 88vh;
+    box-sizing: border-box;
+    width: 60%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px auto;
+    letter-spacing: 2px;
+    color: #e4e4e4;
+    border: 15px solid #0c2a42;
+    background-size: cover;
+    background-position: center;
+    background-color: #173f63;
+    overflow: hidden;
+    font-family: 'SemiBold', sans-serif;
+    text-transform: uppercase;
+}
+
+.entrar button{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #0c2a42;
+    background-color: #cbcbcb; 
+    border: 2px solid #0c2a42; 
+    border-radius: 10px; 
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-align: center;
+    flex: 1;
+    margin: 0 5px; 
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Minecraft', sans-serif;
+    letter-spacing: 2px;
+    min-width: 250px;
+    margin-top: 5px;
+}
+
+.entrar button:hover{
+    background-color: #0c2a42;
+    color: #fac917; 
+    border-color: #cbcbcb; 
+    transition: 1s; 
+}
+
+.entrar input{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #0c2a42;
+    background-color: #cbcbcb; 
+    border: 2px solid #0c2a42; 
+    border-radius: 10px; 
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-align: center;
+    flex: 1;
+    font-size: 2em;
+    font-family: 'Regular', sans-serif;
+    letter-spacing: 2px;
+    width: 50%;
+}

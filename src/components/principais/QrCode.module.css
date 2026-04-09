@@ -1,0 +1,60 @@
+.fundo{
+    background-color: #cbcbcb;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr {
+    text-align: center;
+    min-height: 88vh;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    background-size: cover;
+    background-position: center;
+    color: #173f63;
+    border: 15px solid #0c2a42;
+    background-color: #e4e4e4;
+    width: 50%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px auto;
+    overflow: hidden;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+}
+
+.qrCode {
+    flex-basis: 80%; 
+    margin-bottom: auto; 
+}
+
+.qr button {
+    flex-basis: 20%; 
+    margin-top: auto; 
+}
+
+.button {
+    background-color: #0c2a42;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #173f63;
+}
+
+.button:disabled {
+    background-color: #7a7a7a;
+    cursor: not-allowed;
+}

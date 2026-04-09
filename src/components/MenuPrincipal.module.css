@@ -1,0 +1,166 @@
+/* Fundo principal */
+.fundo {
+    background-color: #cbcbcb;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do menu principal */
+.menuPrincipal {
+    text-align: center;
+    min-height: 88vh;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    background-size: cover;
+    background-position: center;
+    color: #173f63;
+    border: 15px solid #0c2a42;
+    background-color: #e4e4e4;
+    width: 60%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.menuPrincipal h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #0c2a42;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* Estilo dos botões */
+.menuPrincipal button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #0c2a42;
+    background-color: #cbcbcb; 
+    border: 2px solid #0c2a42; 
+    border-radius: 10px; 
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-align: center;
+    margin: 10px auto; 
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    width: 90%; /* Torna os botões responsivos */
+    max-width: 400px; /* Limita o tamanho máximo */
+    min-height: 50px;
+}
+
+.menuPrincipal button:hover {
+    background-color: #0c2a42;
+    color: #fac917; 
+    border-color: #cbcbcb;
+    transition: 1s; 
+}
+
+/* Estilo para Relatório */
+.relatorio {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    display: block;
+}
+
+.relatorio button {
+    font-size: 1.2em;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+/* Estilo para o botão de sair */
+.sair {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    display: block;
+}
+
+.sair button {
+    font-size: 1.2em;
+    min-width: 150px;
+    min-height: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menuPrincipal {
+        width: 90%;
+    }
+
+    .menuPrincipal h1 {
+        font-size: 2em;
+    }
+
+    .menuPrincipal button {
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+
+    .relatorio button, .sair button {
+        font-size: 1em;
+        min-width: 100px;
+        min-height: 40px;
+    }
+}
+
+.fornecedores {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 10%;
+}
+
+.fornecedores img {
+    width: 100%;
+    aspect-ratio: 1; 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; 
+}
+
+.fornecedores img:hover {
+    transform: scale(1.1); 
+}
+/* Estilo para o botão de materiais */
+
+
+.materiais {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 10%;
+}
+
+.materiais img {
+    width: 100%;
+    aspect-ratio: 1; 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; 
+}
+
+.materiais img:hover {
+    transform: scale(1.1); 
+}
+

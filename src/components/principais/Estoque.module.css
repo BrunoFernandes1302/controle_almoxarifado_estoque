@@ -1,0 +1,351 @@
+/* Fundo principal */
+.fundo {
+    background-color: #cbcbcb;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Container do estoque */
+.estoque {
+    text-align: center;
+    height: 88vh;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+    background-size: cover;
+    background-position: center;
+    color: #173f63;
+    border: 10px solid #0c2a42;
+    background-color: #f9f9f9;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px auto;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título do estoque */
+.estoque h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #0c2a42;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+/* Tabela de itens */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.tabela th, .tabela td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabela th {
+    background-color: #173f63; 
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tabela tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.tabela tr:hover {
+    background-color: #d1e7f0; 
+}
+
+.tabela td {
+    font-size: 14px; 
+    color: #333; 
+}
+
+.voltar{
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 10; 
+    background-color: #cbcbcb;
+    color: #0c2a42;
+    border: 2px solid #0c2a42;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voltar:hover{
+    background-color: #0c2a42;
+    color: #fac917;
+    border-color: #cbcbcb;
+    transition: 1s;
+}
+
+.nav {
+    width: 100%;
+    height: 15%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.table {
+    width: 100%;
+    height: 80%; 
+    border-collapse: collapse;
+    margin-top: auto; 
+    font-size: 16px;
+    overflow-y: auto; 
+}
+
+.searchContainer {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sortableHeader {
+    cursor: pointer;
+    user-select: none;
+    padding: 8px;
+}
+
+.sortableHeader:hover {
+    background-color: #f5f5f5;
+    color: #0c2a42;
+}
+
+.error {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/*Aviso*/
+
+.criticalRow {
+    background-color: #F8D7DA !important;
+    color: #721C24 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.criticalRow:hover {
+    background-color: #F5C6CB !important;
+}
+
+.warningRow {
+    background-color: #FFF3CD !important;
+    color: #856404 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.warningRow:hover {
+    background-color: #FFE9B7 !important;
+}
+
+.criticalRow td:hover, 
+.warningRow td:hover {
+    opacity: 0.9 !important;
+}
+
+.alertBanner {
+    background-color: #F8D7DA;
+    color: #721C24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Qr Code */
+
+.qrCodeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.qrCodeButton:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+.qrCodePopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.qrCodePopupContent {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease;
+}
+
+.qrCodeHeader {
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qrCodeHeader h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.closeIconButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.closeIconButton:hover {
+    background: #eee;
+    color: #333;
+}
+
+.qrCodeInfo {
+    padding: 16px 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.itemName {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.itemDesc {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.qrCodeContainer {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.qrCodeActions {
+    padding: 16px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+
+.printButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.printButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.printButton:active {
+    transform: translateY(0);
+}

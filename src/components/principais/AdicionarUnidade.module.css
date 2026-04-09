@@ -1,0 +1,81 @@
+.fundo{
+    background-color: #cbcbcb;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.und{
+    text-align: center;
+    min-height: 88vh;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    background-size: cover;
+    background-position: center;
+    color: #173f63;
+    border: 15px solid #0c2a42;
+    background-color: #e4e4e4;
+    width: 85%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.und h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #0c2a42;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+}
+
+.und label{
+    font-size: 2em;
+}
+
+.und button{
+    padding: 10px 15px;
+    margin-top: 5px;
+    width: 300px;
+}
+
+.und input{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #0c2a42;
+    border: 2px solid #0c2a42; 
+    border-radius: 10px; 
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-align: center;
+    flex: 1;
+    font-size: 2em;
+    letter-spacing: 2px;
+    width: 50%;
+}
+
+.und select{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #0c2a42;
+    border: 2px solid #0c2a42; 
+    font-weight: bold;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    text-align: center;
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    width: 40%;
+}
+
+
