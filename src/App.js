@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Central from './components/Central';
 import Centraldois from './components/Centraldois';
@@ -19,6 +19,12 @@ import './App.css';
 import fundo from './images/CAPA.png';
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import { useUser } from './contexts/UserContext';
+
+function PrivateRoute({ children }) {
+  const { user } = useUser();
+  return user ? children : <Navigate to="/entrar" replace />;
+}
 
 function App() {
   useEffect(() => {
@@ -106,16 +112,16 @@ function MainApp() {
       <Routes>
         <Route path="/entrar" element={<Entrar />} />
         <Route path="/registrar" element={<Registrar />} />
-        <Route path="/menuprincipal" element={<MenuPrincipal />} />
-        <Route path="/saida" element={<Saida />} />
-        <Route path="/entrada" element={<Entrada />} />
-        <Route path="/cadastraritem" element={<CadastrarItem />} />
-        <Route path="/estoque" element={<Estoque />} />
-        <Route path="/relatorio" element={<Relatorio />} />
-        <Route path="/adicionarunidade" element={<AdicionarUnidade />} />
-        <Route path="/qrcode" element={<QrCode />} />
-        <Route path="/fornecedores" element={<Fornecedores />} />
-        <Route path="/materiais" element={<Materiais />} />
+        <Route path="/menuprincipal" element={<PrivateRoute><MenuPrincipal /></PrivateRoute>} />
+        <Route path="/saida" element={<PrivateRoute><Saida /></PrivateRoute>} />
+        <Route path="/entrada" element={<PrivateRoute><Entrada /></PrivateRoute>} />
+        <Route path="/cadastraritem" element={<PrivateRoute><CadastrarItem /></PrivateRoute>} />
+        <Route path="/estoque" element={<PrivateRoute><Estoque /></PrivateRoute>} />
+        <Route path="/relatorio" element={<PrivateRoute><Relatorio /></PrivateRoute>} />
+        <Route path="/adicionarunidade" element={<PrivateRoute><AdicionarUnidade /></PrivateRoute>} />
+        <Route path="/qrcode" element={<PrivateRoute><QrCode /></PrivateRoute>} />
+        <Route path="/fornecedores" element={<PrivateRoute><Fornecedores /></PrivateRoute>} />
+        <Route path="/materiais" element={<PrivateRoute><Materiais /></PrivateRoute>} />
       </Routes>
 
       {/* Renderiza o Footer somente se a rota atual não estiver na lista de exclusão */}

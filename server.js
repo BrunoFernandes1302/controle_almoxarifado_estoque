@@ -1,22 +1,28 @@
+require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
 const QRCode = require('qrcode');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
-// Middleware
+const qrCodeDir = path.join(__dirname, 'public', 'qrcodes');
+if (!fs.existsSync(qrCodeDir)) fs.mkdirSync(qrCodeDir, { recursive: true });
+
 app.use(cors());
 app.use(express.json());
+app.use('/qrcodes', express.static(qrCodeDir));
 
-// Database Connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  port: 3306,
-  database: 'axm',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
 });
 
 db.connect((err) => {
@@ -479,7 +485,7 @@ app.post('/api/entrar/desfazer-cancelamento/:id', async (req, res) => {
   const { id } = req.params;
   const { senha } = req.body;
   
-  if (senha !== "0000") {
+  if (senha !== ADMIN_PASSWORD) {
     return res.status(401).json({ error: 'Senha incorreta' });
   }
 
@@ -523,7 +529,7 @@ app.post('/api/saida/desfazer-cancelamento/:id', async (req, res) => {
   const { id } = req.params;
   const { senha } = req.body;
   
-  if (senha !== "0000") {
+  if (senha !== ADMIN_PASSWORD) {
     return res.status(401).json({ error: 'Senha incorreta' });
   }
 
