@@ -127,6 +127,36 @@ Login → Menu Principal
 
 ---
 
+## Screenshots
+
+Página inicial:
+
+![Página inicial](Imagens_Projeto/Pagina_inicial1.png)
+
+![Página inicial](Imagens_Projeto/Pagina_inicial2.png)
+
+Cadastro de usuário:
+
+![Cadastro](Imagens_Projeto/Registro.png)
+
+Área de trabalho:
+
+![Área de trabalho](Imagens_Projeto/Area_trabalho.png)
+
+Saída de material e leitor de QR Code:
+
+![Saída](Imagens_Projeto/Saida.png)
+
+![Leitor QR Code](<Imagens_Projeto/Leitor QR Code.png>)
+
+Relatório e materiais em estoque:
+
+![Relatório](Imagens_Projeto/Relatorio.png)
+
+![Materiais em estoque](Imagens_Projeto/Materiais_estoque.png)
+
+---
+
 ## Licença
 
 Projeto acadêmico — uso livre para fins educacionais.
